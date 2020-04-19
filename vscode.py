@@ -28,7 +28,8 @@ class VSCodeApp(BaseApp):
             'debian': '8',
             'fedora': '23',
             'suse': '42.1',
-            'ubuntu': '14.04'
+            'ubuntu': '14.04',
+            'linuxmint': '18.1'
         }
 
         super(VSCodeApp, self).__init__(
@@ -165,7 +166,7 @@ class VSCodeApp(BaseApp):
                 DISTRO_VER = m.group(1)
                 break
 
-        if DISTRO_NAME in ['ubuntu', 'debian']:
+        if DISTRO_NAME in ['ubuntu', 'debian', 'linuxmint']:
             _pkg_type = 'deb'
         else:
             _pkg_type = 'rpm'
@@ -185,7 +186,7 @@ class VSCodeApp(BaseApp):
         url = self.app_data.get('url')
 
         is_opensuse = 'opensuse' in self._DISTRO_NAME
-        is_deb = self._DISTRO_NAME in ['ubuntu', 'debian']
+        is_deb = self._DISTRO_NAME in ['ubuntu', 'debian', 'linuxmint']
         is_rpm = self._DISTRO_NAME in ['centos', 'rhel', 'fedora']
         wm = self._process_api
 
@@ -476,7 +477,7 @@ class VSCodeApp(BaseApp):
         locations = []
         uninstall_cmd = []
         is_opensuse = 'opensuse' in self._DISTRO_NAME
-        is_deb = self._DISTRO_NAME in ['ubuntu', 'debian']
+        is_deb = self._DISTRO_NAME in ['ubuntu', 'debian', 'linuxmint']
         is_rpm = self._DISTRO_NAME in ['centos', 'rhel', 'fedora']
 
         if MAC:
