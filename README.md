@@ -1,0 +1,1 @@
+# anaconda_linuxmint_fix
