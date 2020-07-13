@@ -5,7 +5,7 @@ conducted in vscode.py fails to find Linux Mint as a distro.
 
 This file is found in the following directory: 
 
-./anaconda3/lib/python3.7/site-packages/anaconda_navigator/api/external_apps/vscode.py
+~/anaconda3/lib/python3.7/site-packages/anaconda_navigator/api/external_apps/vscode.py
 
 The file posted has as sole modifications the 'linuxmint' keywords where only 'debian' and 'ubuntu' 
 were listed for that branch of Linux distros using the deb package managers.
