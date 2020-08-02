@@ -29,7 +29,8 @@ class VSCodeApp(BaseApp):
             'fedora': '23',
             'suse': '42.1',
             'ubuntu': '14.04',
-            'linuxmint': '18.1'
+            'linuxmint': '18.1',
+            'zorin' : '15.2',
         }
 
         super(VSCodeApp, self).__init__(
